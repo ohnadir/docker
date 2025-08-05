@@ -7,9 +7,9 @@ const port = process.env.PORT || 8080;
 const ip = process.env.IP_ADDRESS;
 
 app.get('/', (req, res) => {
-    res.send('Hello Docker Container with values')
+    res.send('Hello Docker Container 🐳')
 })
 
 app.listen(port, ip,  () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Hello From Docker 🐳 ${port}`)
 })

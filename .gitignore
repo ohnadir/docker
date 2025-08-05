@@ -1,3 +1,5 @@
 node_modules
 npm-debug.log
-.env
+
+
+# how to push the container to the registry

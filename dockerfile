@@ -1,14 +1,20 @@
-# mentioned node version from docker
-FROM node:latest
+# Dockerfile.dev
+FROM node:20-alpine
 
-# create app directory;
-COPY . /home/app/index.js
+# WORKDIR /home/app
+WORKDIR /app
 
-# Create app directory;
-WORKDIR /home/app
+#COPY source destination
+COPY package*.json ./
+
+# Install app dependencies;
+RUN npm install
+
+# Copy the rest of the project files
+COPY . .
 
 # expose port;
-EXPOSE 3000
+EXPOSE 8080
 
 #Run app
 CMD ["npm", "start"]
